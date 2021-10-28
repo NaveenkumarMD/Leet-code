@@ -5,6 +5,6 @@ def topKFrequent(self, nums, k):
             continue
         else:
             dit[i]=nums.count(i)
-    print dit
+    print (dit)
     x=sorted(dit,key=dit.get,reverse=True)
     return x[:k]
