@@ -11,5 +11,5 @@ class Solution:
         return "".join(arr)
 
 x=Solution()
-y=x.convert("PAYPALISHIRING",3)
+y=x.convert("AB",1)
 print(y)
