@@ -2,13 +2,9 @@ class Solution:
     def numUniqueEmails(self, emails) -> int:
         sets=set()
         for email in emails:
-            s=""
             d,e=email.split("@")
             d=d.replace('.','')
-            if '+' in d:
-                d=d[:d.find('+')]
+            d=d.split("+")[0]
             sets.add(d+"@"+e)
-            s=""
-        print(sets)
         return len(sets)
         
