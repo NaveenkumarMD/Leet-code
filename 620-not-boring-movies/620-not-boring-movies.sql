@@ -1,0 +1,1 @@
+select * from Cinema where description not in ("boring") and MOD(id,2)!=0  ORDER BY rating DESC
