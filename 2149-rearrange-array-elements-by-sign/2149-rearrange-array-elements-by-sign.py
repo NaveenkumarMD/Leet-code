@@ -1,16 +1,13 @@
 class Solution:
     def rearrangeArray(self, nums: List[int]) -> List[int]:
-        arr1=[]
-        arr2=[]
+        positive,negative=0,1
+        arr=[0]*len(nums)
         for i in nums:
-            if i>0:
-                arr1.append(i)
+            if i<0:
+                arr[negative]=i
+                negative+=2
             else:
-                arr2.append(i)
-        i=0
-        arr=[]
-        while i<len(arr1):
-            arr.append(arr1[i])
-            arr.append(arr2[i])
-            i+=1
+                arr[positive]=i
+                positive+=2
         return arr
+                
