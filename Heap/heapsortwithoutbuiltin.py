@@ -19,6 +19,6 @@ def heapsort(arr):
         heapify(arr,i,0)
     
 if __name__ == '__main__':
-    arr=[23,45,24,2,4,5]
+    arr=[1,2,3,4,5,6,7,4,5,6,4,5,6]
     heapsort(arr)
     print(arr)
