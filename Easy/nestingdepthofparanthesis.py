@@ -1,17 +1,19 @@
-class Solution:
-    def maxDepth(self, s: str) -> int:
-        maxdepth=0
-        count=0
-        for i in s:
-            if i=="(":
-                count+=1
-            if i==")":
-                count-=1
-            if count>maxdepth:
-                maxdepth=count
-        return maxdepth
-                
-        
-c=Solution()
-x=c.maxDepth("(1+(2*3)+((8)/4))+1")
-print(x)
+def rotateArray(arr, n, d):
+    temp = []
+    i = 0
+    while (i < d):
+        temp.append(arr[i])
+        i = i + 1
+    i = 0
+    while (d < n):
+        arr[i] = arr[d]
+        i = i + 1
+        d = d + 1
+    arr[:] = arr[: i] + temp
+    return arr
+n=int(input())
+arr=[]
+for i in range(n):
+    arr.append(int(input()))
+rotate_num=int(input())
+print(rotateArray(arr, n, rotate_num))

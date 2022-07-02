@@ -37,13 +37,9 @@ class Tree:
 
         
 tree=Tree()
-tree.root=Node(10)
-tree.root.left=Node(7)
-tree.root.right=Node(12)
-# tree.preorder(tree.root)
-# tree.inorder(tree.root)
-# tree.postorder(tree.root)
+
 tree.insert(45)
+tree.preorder(tree.root)
 
 
     
