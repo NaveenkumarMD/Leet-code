@@ -10,18 +10,18 @@ class Solution:
         if not root:
             return 0
 
-        q = queue.Queue()
-        q.put((1, root))
-        while not q.empty():
-            level, node = q.get()
+        q = []
+        q.append((1, root))
+        while q:
+            level, node = q.pop(0)
             if not node.left and not node.right:
                 return level
             
             if node.left:
-                q.put((level+1, node.left))
+                q.append((level+1, node.left))
                 
             if node.right:
-                q.put((level+1, node.right))
+                q.append((level+1, node.right))
             
             
         
