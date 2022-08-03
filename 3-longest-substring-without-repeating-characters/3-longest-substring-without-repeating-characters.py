@@ -8,5 +8,6 @@ class Solution:
                 c.remove(s[start])
                 start+=1
             c.add(s[i])
-            res=max(res,i-start+1)
+            res=max(i-start+1,res)
         return res
+            
