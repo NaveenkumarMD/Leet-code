@@ -7,12 +7,12 @@ class Solution:
             if nums[mid]==target:
                 return mid
             elif nums[i]<=nums[mid]:
-                if target>=nums[i] and target<=nums[mid]:
+                if nums[i]<=target and nums[mid]>=target:
                     j=mid-1
                 else:
                     i=mid+1
             else:
-                if target>=nums[mid] and target<=nums[j]:
+                if nums[mid]<=target and nums[j]>=target:
                     i=mid+1
                 else:
                     j=mid-1
